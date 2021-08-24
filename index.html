@@ -37,20 +37,42 @@
   color: white;
 }
   
- p.name{
-  text-align: left;
-  color: white;
-  padding: 2px 10px;
+ body {font-family: "Lato", sans-serif;}
+
+.sidebar {
+  height: 38.80%;
+  width: 120px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 16px;
+  background-color:#101010;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px -8px;
-  border: 2px solid #081a32;
-  border-image: url("https://img.pixers.pics/pho_wat(s3:700/FO/32/79/58/63/700_FO32795863_1d64d5733b647d6474d3e83ecd3b1303.jpg,700,645,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,595,jpg)/stickers-blue-lightning.jpg.jpg") 35 round;
-  position:absolute;
-  top: 10px;
-  left: 10px;
- }
+  text-align: left;
+  font-size: 20px;
+  color: #f1f1f1;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #B10505;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
     </style>
 
 <head>
@@ -64,19 +86,22 @@
     <style>
 body {
   background-image: url("https://images.unsplash.com/photo-1537036017783-64573b29adb9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bGlnaHRpbmclMjBib2x0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
+  background-size:100% 60%;
+  background-position:bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;  
-  background-size: cover;
 }
 </style>
 </head>
 <body>
-
+  <div class="sidebar">
+    <a href="#home"><i class="fa fa-fw fa-home"></i> About</a>
+    <a href="#services"><i class="fa fa-fw fa-wrench"></i>Media </a>
+    <a href="#clients"><i class="fa fa-fw fa-user"></i> Resume</a>
+    <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+  </div>
 
 <body>
-    <p class="name">Giann Berrospi <br>
-     email@email <br>
-     linkedin</p>
     <h1 style="color:white;">Welcome to the Dungeon</h1>
     <p style="color:white;">How loud can we turn this up?</p>
     <p style="color:white;">Its still a work in progress</p>
@@ -87,3 +112,4 @@ body {
 
 </body>
 </html>
+
