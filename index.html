@@ -1,118 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
- <title>Geo Website</title>
- <link rel = "icon" href = 
-"https://st2.depositphotos.com/3646177/7020/v/600/depositphotos_70204159-stock-illustration-cobra-snake-logo-vector.jpg" 
-        type = "image/x-icon">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <style>
-    .button {
-  border: none;
-  color: white;
-  padding: 8px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
+<title>Geo Website</title>
+<link rel="icon"
+  href="https://st2.depositphotos.com/3646177/7020/v/600/depositphotos_70204159-stock-illustration-cobra-snake-logo-vector.jpg"
+  type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .button {
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
 
-.button1 {
-  background-color: black; 
-  color: white; 
-  border: 2px solid #0D3E89;
-}
+  .button1 {
+    background-color: black;
+    color: white;
+    border: 2px solid #a5150b;
+  }
 
-.button1:hover {
-  background-color: #FF3333;
-  color: white;
-}
+  .button1:hover {
+    background-color: #FF3333;
+    color: white;
+  }
 
-.button2 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #0D3E89;
-}
+  .button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #0D3E89;
+  }
 
-.button2:hover {
-  background-color: #008CBA;
-  color: white;
-}
-  
- body {font-family: "Lato", sans-serif;}
+  .button2:hover {
+    background-color: #008CBA;
+    color: white;
+  }
 
-.sidebar {
-  height: 38.80%;
-  width: 120px;
-  position:sticky;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  padding-top: 16px;
-}
+  body {
+    font-family: "Lato", sans-serif;
+  }
 
-.sidebar a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  text-align: left;
-  font-size: 20px;
-  color: #f1f1f1;
-  display: block;
-}
+  .sidebar {
+    height: 38.80%;
+    width: 120px;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 16px;
+  }
 
-.sidebar a:hover {
-  color: #B10505;
-}
+  .sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    text-align: left;
+    font-size: 20px;
+    color: #f1f1f1;
+    display: block;
+  }
 
-.main {
-  margin-left: 160px; /* Same as the width of the sidenav */
-  padding: 0px 10px;
-}
+  .sidebar a:hover {
+    color: #B10505;
+  }
 
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-}
-    </style>
+  .main {
+    margin-left: 160px;
+    /* Same as the width of the sidenav */
+    padding: 0px 10px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidebar {
+      padding-top: 15px;
+    }
+
+    .sidebar a {
+      font-size: 18px;
+    }
+  }
+</style>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="styles.css">
+
 </head>
-    <style>
-body {
-  background-image: url("https://images.unsplash.com/photo-1537036017783-64573b29adb9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bGlnaHRpbmclMjBib2x0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
-  background-size:100% 60%;
-  background-position:bottom;
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-}
+<style>
+  body {
+    background-image: url("https://images.unsplash.com/photo-1537036017783-64573b29adb9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bGlnaHRpbmclMjBib2x0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
+    background-size: 100% 60%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .main_content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .main_content .inner_content {
+    width: 50%;
+  }
+
+  .main_content .inner_content h1 {
+    color: #fff;
+    margin: 0;
+  }
+
+  .main_content .inner_content p {
+    color: #fff;
+  }
+
+  /* SIDEBAR */
+
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.35s ease-in-out;
+  }
+
+  #menuToggle a:hover {
+    color: #FF3333;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
+
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  #menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  #menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  #menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  #menu {
+    position: absolute;
+    width: 200px;
+    margin: -74px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    padding-bottom: 191px;
+    background: #380302;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  }
+
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  #menuToggle input:checked~ul {
+    transform: none;
+  }
+
+  @media screen and (min-width: 360px) and (max-width: 700px) {
+    #menuToggle {
+      top: 45px;
+      left: 20px;
+    }
+
+    .main_content .inner_content h1{
+      font-size: 25px;
+    }
+  }
 </style>
 </head>
+
+
 <body>
-  <div class="sidebar">
-    <a href="/site/about.html"><i class="fa fa-fw fa-home"></i> About</a>
-    <a href="#services"><i class="fa fa-fw fa-wrench"></i>Media </a>
-    <a href="#clients"><i class="fa fa-fw fa-user"></i> Resume</a>
-    <a href="/site/contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+
+
+  <!-- Sidebar -->
+  <nav role="navigation">
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <span style="background: #fff;"></span>
+      <span style="background: #fff;"></span>
+      <span style="background: #fff;"></span>
+      <ul id="menu">
+        <a href="/site/about.html">
+          <li><i class="fa fa-fw fa-home"></i> About</li>
+        </a>
+        <a href="#media">
+          <li><i class="fa fa-fw fa-wrench"></i>Media</li>
+        </a>
+        <a href="#resume">
+          <li><i class="fa fa-fw fa-wrench"></i>Resume</li>
+        </a>
+        <a href="/site/contact.html">
+          <li><i class="fa fa-fw fa-envelope"></i>Contact</li>
+        </a>
+      </ul>
+    </div>
+  </nav>
+  <!-- main -->
+  <div class="main_content">
+    <div class="inner_content">
+      <h1>Welcome to the Dungeon</h1>
+      <p>How loud can we turn this up?</p>
+      <p>Its still a work in progress</p>
+      <p>Farewell visitor!</p>
+
+      <button class="button button1" onclick="window.location.href='https://geoberrospi.github.io/redoffensive/';">Red
+        Pill</button>
+      <button class="button button2">Blue Pill</button>
+    </div>
   </div>
-
-<body>
-    <h1 style="color:white;">Welcome to the Dungeon</h1>
-    <p style="color:white;">How loud can we turn this up?</p>
-    <p style="color:white;">Its still a work in progress</p>
-    <p style="color:white;">Farewell visitor!</p>
-    
-    <button class="button button1" onclick="window.location.href='https://geoberrospi.github.io/redoffensive/';">Red Pill</button>
-    <button class="button button2">Blue Pill</button>
-
 </body>
-</html>
 
+</html>
