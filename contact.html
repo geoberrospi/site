@@ -1,43 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
- <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 <style>
- .head{
-      margin: 0;
-  background: black;
-  color: white;
-  text-align:center;
+  .head {
+    margin: 0;
+    background: black;
+    color: white;
+    text-align: center;
   }
-  body{
-  background-color:black;
- }
-    </style>
+
+  body {
+    background-color: black;
+  }
+
+  .contact_form {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+  }
+
+  .contact_form .main_form {
+    width: 60%;
+    background: black;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .contact_form .main_form .form_items {
+    width: 80%;
+    text-align: left;
+  }
+
+  .contact_form .main_form .form_items h1 {
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  .contact_form .main_form .form_items h4 {
+    color: white;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .contact_form .main_form .form_items label {
+    color: white;
+  }
+
+  .contact_form .main_form .form_items input {
+    width: 90%;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    height: 40px;
+    padding: 10px;
+  }
+  .contact_form .main_form .form_items input:focus-visible{
+    outline: none;
+  }
+  .contact_form .main_form .form_items textarea {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  .contact_form .main_form .form_items textarea:focus-visible{
+    outline: none;
+  }
+  .btn-send {
+    background: #efefef;
+    padding: 5px 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    color: #000 !important;
+    font-size: 14px;
+    font-weight: 300;
+    border-color: #767676;
+    text-decoration: none !important;
+    transition: all 0.35s ease-in-out;
+  }
+
+  .btn-send:hover {
+    background: #dddbdb;
+    color: #fff;
+  }
+</style>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
-    <div class="head">
-        <h1 style="color:white;">I AM HERE</h1>
-     <a href="https://geoberrospi.github.io/site" class="button">
-     <p style="color:white;">Giann Berrospi</p>
-     <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="geoberrospi-alc" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/geoberrospi-alc?trk=profile-badge" style="color:white"></a></div>
-<hr>
-      <h1 style="color:white;">Or Send Me An Email!</h1>
- <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xknkplep" method="post">
-  <fieldset id="fs-frm-inputs">
-    <label for="full-name">Full Name</label>
-    <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
-    <label for="email-address">Email Address</label>
-    <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
-    <label for="message">Message</label>
-    <textarea rows="5" name="message" id="message" placeholder="UGxhY2UgeW91ciBtZXNzYWdlIGhlcmU=." required=""></textarea>
-    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-  </fieldset>
-  <input type="submit" value="Submit">
-</form>
-    
+  <div class="head">
+    <h1 style="color:white;">I AM HERE</h1>
+    <a href="https://geoberrospi.github.io/site" class="button">
+      <p style="color:white;">Giann Berrospi</p>
+      <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark"
+        data-type="VERTICAL" data-vanity="geoberrospi-alc" data-version="v1"><a class="badge-base__link LI-simple-link"
+          href="https://www.linkedin.com/in/geoberrospi-alc?trk=profile-badge" style="color:white"></a></div>
+      <hr>
+    </a>
+
+    <div class="contact_form">
+      <form class="main_form">
+        <div class="form_items">
+          <h1>Or Send Me an Email ! </h1>
+          <h4>Powered byFormspree</h4>
+          <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xknkplep" method="post">
+          <fieldset id="fs-frm-inputs">
+          <label for="full-name">Full Name</label>
+          <input type="text" name="name" id="full-name" placeholder="" required="">
+          <label for="fname">Your email address:</label>
+          <input type="email" name="_replyto" id="email-address" placeholder="" required="">
+
+          <label for="message">Your message:</label>
+          <textarea id="message" name="message" placeholder="" style="height:200px;width: 95%;"></textarea>
+          <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+          </fieldset>
+          <input type="submit" value="Submit"> 
+          
+
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+
 </body>
+
 </html>
